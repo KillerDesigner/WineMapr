@@ -1,0 +1,27 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html, body, #map {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+}
+
+.top-bar {
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 0;
+    position: relative;
+    opacity: 0.6;
+    border-bottom: 2px solid #444444;
+    box-shadow: 0 6px 10px #888888;
+    z-index: 9999;
+}
+
+.top-bar h1 {
+    font-family: 'Arial';
+    margin-left: 10px;
+    margin-top: 0;
+}

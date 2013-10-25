@@ -1,0 +1,5 @@
+class InfoWindowController < ApplicationController
+
+
+
+end

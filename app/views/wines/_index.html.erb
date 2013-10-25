@@ -1,0 +1,42 @@
+<% if @results %>
+<table class="table table-hover">
+  <thead>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Region</th>
+    <th>Winery</th>
+    <th>Winery ID</th>
+    <th>Varietal</th>
+    <th>Price</th>
+    <th>Vintage</th>
+    <th>Type</th>
+    <th>Link</th>
+    <th>Tags</th>
+    <th>Image</th>
+    <th>Available</th>
+    <th># of Reviews</th>
+  </thead>
+<tbody>
+<% @results.each do |wine| %>
+    <tr>
+      <td><a href="/wine/<%= wine["name"] %>"><%= wine["name"] %></a></td>
+      <td><%= wine["code"] %></td>
+      <td><%= wine["region"] %></td>
+      <td><%= wine["winery"] %></td>
+      <td><%= wine["winery_id"] %></td>
+      <td><%= wine["varietal"] %></td>
+      <td><%= wine["price"] %></td>
+      <td><%= wine["vintage"] %></td>
+      <td><%= wine["type"] %></td>
+      <td><%= wine["link"] %></td>
+      <td><%= wine["tags"] %></td>
+      <td><%= wine["image"] %></td>
+      <td><%= wine["available"] %></td>
+      <td><%= wine["num_reviews"] %></td>
+    </tr>
+<% end %>
+</tbody>
+</table>
+<% elsif @message == "bad search" %>
+<p class="alert alert-danger">I didn't find a match for that title! Try your search again</p>
+<% end %>

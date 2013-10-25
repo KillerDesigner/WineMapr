@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WineMapr</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- START top-bar -->
+<nav class="top-bar">
+  <h1 id = "title"><a>WineMapr</a></h1>
+</nav>
+
+<%= yield %>
+
+<!-- START footer section -->
+  <footer>
+    <%= render 'layouts/footer' %>
+  </footer>
+
+</body>
+</html>
